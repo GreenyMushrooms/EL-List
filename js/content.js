@@ -62,6 +62,9 @@ export async function fetchEditors() {
 
 export async function fetchLeaderboard() {
     const list = await fetchList();
+    const listResponse = await fetch(`${dir}/_list.json`);
+    const allMaps = await listResponse.json();
+    const totalMaps = allMaps.length; // Get count from _list.json
 
     const scoreMap = {};
     const errs = [];
@@ -139,5 +142,5 @@ export async function fetchLeaderboard() {
     });
 
     // Sort by total score
-    return [res.sort((a, b) => b.total - a.total), errs];
+    return [res.sort((a, b) => b.total - a.total), errs, totalMaps];
 }

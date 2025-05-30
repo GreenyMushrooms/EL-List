@@ -43,7 +43,7 @@ export default {
                 </div>
                 <div class="player-container">
                     <div class="player">
-                        <h1>#{{ selected + 1 }} {{ entry.user }}</h1>
+                        <h1>#{{ selected + 1 }} {{ entry.user }} <span class="percentage">({{ completionPercentage }}%)</span></h1>
                         <h3>{{ entry.total }}</h3>
                         <h2 v-if="entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
                         <table class="table">
@@ -96,11 +96,23 @@ export default {
         entry() {
             return this.leaderboard[this.selected];
         },
+        completionPercentage() {
+            if (!this.entry || !this.totalMaps) return 0;
+
+            // Count verified+completed as "completed"
+            const playerCompleted = [
+                ...(this.entry.verified || []),
+                ...(this.entry.completed || [])
+            ].length;
+            
+            return ((playerCompleted / this.totalMaps) * 100).toFixed(2);
+        }
     },
     async mounted() {
-        const [leaderboard, err] = await fetchLeaderboard();
+        const [leaderboard, err, totalMaps] = await fetchLeaderboard();
         this.leaderboard = leaderboard;
         this.err = err;
+        this.totalMaps = totalMaps; // stores total maps count
         // Hide loading spinner
         this.loading = false;
     },

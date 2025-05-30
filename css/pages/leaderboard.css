@@ -27,6 +27,12 @@
     grid-row: 2;
     padding-block: 2rem;
 }
+.page-leaderboard .player-container .percentage {
+  color: #999; /* Grey color */
+  font-size: 0.8em; /* Slightly smaller */
+  margin-left: 8px; /* Space from name */
+  font-weight: normal; /* Less bold than heading */
+}
 .page-leaderboard .board-container {
     padding-inline: 1rem;
 }
