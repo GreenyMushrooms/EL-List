@@ -1,0 +1,27 @@
+[
+    {
+        "role": "owner",
+        "name": "GreenMushroom",
+        "link": "https://www.youtube.com/@greenmushroom9442"
+    },
+    {
+        "role": "admin",
+        "name": "List Admin",
+        "link": "https://www.youtube.com/@Prometheus_Alt"
+    },
+    {
+        "role": "helper",
+        "name": "List Helper",
+        "link": "https://www.youtube.com/@Prometheus_Alt"
+    },
+    {
+        "role": "trial",
+        "name": "Trial List Helper",
+        "link": "https://www.youtube.com/@Prometheus_Alt"
+    },
+    {
+        "role": "dev",
+        "name": "GreenMushroom",
+        "link": "https://www.youtube.com/@greenmushroom9442"
+    }
+]
