@@ -10,7 +10,9 @@
     "records": [
         {
             "user": "",
-            "link": ""
+            "link": "",
+            "percent" : 100
+            
         }
     ]
 }

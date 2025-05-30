@@ -10,7 +10,8 @@
     "records": [
         {
             "user": "AbondedNajs",
-            "link": "https://www.youtube.com/watch?v=FCDWZSEivng"
+            "link": "https://www.youtube.com/watch?v=FCDWZSEivng",
+            "percent" : 100
         }
     ]
 }
