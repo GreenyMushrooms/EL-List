@@ -1,0 +1,41 @@
+.page-submission-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    min-height: 100vh;       /* Ensures the container takes up the full viewport height */
+}
+
+.page-submission {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* 3 columns */
+  grid-template-rows: max-content 1fr;
+  gap: 2rem;
+}
+
+.map-container {
+  grid-column: 2; /* Targets the middle column */
+  display: grid;
+  place-items: center;
+  padding-bottom: 20rem;
+}
+
+/*.User {
+  grid-column: 2; 
+  display: grid;
+  place-items: center;
+  padding-bottom: 30rem;
+}*/
+
+.SubmitButton {
+  background: #5865F2; /* Discord blurple */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.SubmitButton:hover {
+  background: #4752C4;
+}
