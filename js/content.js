@@ -38,6 +38,18 @@ export async function fetchList() {
     }
 }
 
+export async function fetchmaps() {
+    const listResult = await fetch(`${dir}/_list.json`);
+    try {
+        const list = await toString(listResult.json());
+    }
+
+    catch(err) {
+        console.error(`Failed to load list.`);
+        return null;
+    }
+}
+
 export async function fetchEditors() {
     try {
         const editorsResults = await fetch(`${dir}/_editors.json`);
