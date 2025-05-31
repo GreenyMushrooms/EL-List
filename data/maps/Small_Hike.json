@@ -9,8 +9,9 @@
     "percentToQualify": "100",
     "records": [
         {
-            "user": "",
-            "link": ""
+            "user": "GreenMushroom",
+            "link": "",
+            "percent": 100
         }
     ]
 }

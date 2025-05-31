@@ -1,6 +1,6 @@
 {
     "gamelink": "https://www.roblox.com/games/12000450247/grayscale",
-    "name": "Rushing Isles",
+    "name": "Grayscale",
     "author": "VeryGoodName_123",
     "creators": ["VeryGoodName_123"],
     "verifier": "",
@@ -12,6 +12,11 @@
             "user": "AbondedNajs",
             "link": "",
             "percent" : 100
+        },
+        {
+            "user": "GreenMushroom",
+            "link": "",
+            "percent":100
         }
     ]
 }

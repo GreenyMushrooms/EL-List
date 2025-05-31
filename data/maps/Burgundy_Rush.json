@@ -9,8 +9,9 @@
     "percentToQualify": "100",
     "records": [
         {
-            "user": "",
-            "link": ""
+            "user": "GreenMushroom",
+            "link": "https://www.youtube.com/watch?v=DtNK1ihbgPs",
+            "percent":100
         }
     ]
 }
