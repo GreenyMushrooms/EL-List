@@ -1,4 +1,4 @@
-import { localize } from '../js/util.js';
+
 import { fetchmaps } from '../js/content.js';
 
 import Spinner from '../js/components/Spinner.js';
@@ -12,10 +12,9 @@ export default {
         submission: [],
         loading: true,
         maps: [],
-        userName: '',       // store user input
+        userName: '',       // store user stuff
         mapName: '',
-        ytLink:'',
-        searchError: false,  // track validation state   
+        ytLink:'',   
     }),
 
     template:`
@@ -63,34 +62,14 @@ export default {
 
      methods: {
   async handleSubmit() {
-    if (!this.mapName.trim() || !this.userName.trim()) {
+    if (!this.mapName.trim() || !this.userName.trim() || !this.ytLink.trim()) {
       this.searchError = true;
       alert("Please fill all required fields!");
       return;
     }
 
     try {
-      // Replace with your Discord webhook URL
-      const webhookUrl = "https://discord.com/api/webhooks/your-webhook-id/your-token";
-
-      const message = {
-        content: `New submission!\n**Map:** ${this.mapName}\n**User:** ${this.userName}\n**YT Link:** ${this.ytLink || "N/A"}`,
-      };
-
-      const response = await fetch(webhookUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(message),
-      });
-
-      if (response.ok) {
-        alert("Submission sent successfully!");
-        this.mapName = "";
-        this.userName = "";
-        this.ytLink = "";
-      } else {
-        alert("Failed to send submission.");
-      }
+      
     } catch (error) {
       console.error("Error:", error);
       alert("An error occurred.");
