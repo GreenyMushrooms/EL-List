@@ -75,7 +75,7 @@ export async function fetchLeaderboard() {
         }
 
         // Verification
-        if (!level.verifier || level.verifier.trim() === "") return;
+        //if (!level.verifier || level.verifier.trim() === "") return;
 
         const verifier = Object.keys(scoreMap).find(
             (u) => u.toLowerCase() === level.verifier.toLowerCase(),
